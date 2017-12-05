@@ -1,0 +1,124 @@
+.common-btn{
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    display: inline-block;
+    min-width: 254px;
+    text-transform: $capital;
+    color: $white;
+    position: relative;
+    background: $p2hgreen;
+    @include transform(perspective(1px) translateZ(0));
+    box-shadow: 0 0 1px transparent;
+    @include transition(color ease 0.5s);
+    padding: 0 30px;
+    @include laptop{
+        min-width: 220px;
+    }
+    @include tablet{
+        min-width: 200px;
+    }
+    @include phone-landscape{
+        height: 40px;
+        line-height: 40px;
+        min-width: inherit;
+        padding: 0 20px;
+        font-size: 14px;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $p2hdarkblue;
+        @include transform(scaleY(0));
+        @include transform-origin(50% 0);
+        @include transition(transform ease-out 0.5s);
+    }
+    
+    &:hover{
+        color: $white;
+        &:before{
+            @include transform(scaleY(1));
+            @include transition-timing-function(cubic-bezier(0.52, 1.64, 0.37, 0.66));
+        }
+    }
+    &.white-btn{
+        background: $white;
+        color: $charcoal;
+        border: 0;
+        &:before{
+            background: $p2hdarkgreen2;
+        }
+        &:hover{
+            color: $white;
+        }
+    }
+    &.dark-btn{
+        background: $p2hdarkblue;
+        &:before{
+            background: $p2hgreen;
+        }
+        &:hover{
+            color: $white;
+        }
+    }
+    &.gradient-btn, &.gradient-btn2{
+        @include p2h_gradient_button;
+        color: $white;
+        background-size: 200% auto;
+        &:hover{
+            background-position: right center;
+        }
+    }
+    &.gradient-btn2{
+        @include p2h_gradient_button2;
+    }
+    &.full-btn{
+        width: 100%;
+    }
+}
+
+
+.border-button {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        overflow: hidden;
+        @include transition(all 1s ease-in-out);
+        width: 10px;
+        opacity: 1;
+        height: 1000%;
+        top: 50%;
+        left: 50%;
+        background: $white;
+        @include transform(translateX(270%) translateY(-52.7%) rotate(84deg));
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        box-shadow: inset 0 0 0 1px;
+    }
+    &:hover{
+        color: $charcoal !important;
+        &:before{
+            animation: buttonEffect 1.5s ease;
+            width: 0;
+            @include transform(translateX(300%) translateY(-40%) rotate(-90deg));
+        }
+    }
+}
+
+

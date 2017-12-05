@@ -1,0 +1,92 @@
+.common-btn{
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    display: inline-block;
+    min-width: 254px;
+    text-transform: $capital;
+    color: $charcoal;
+    font-family: $semibold;
+    position: relative;
+    &.white-btn{
+        span{
+            position: relative;
+            z-index: 9;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-color: rgba(255,255,255,1);
+            @include transition(ease 0.3s);
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0;
+            @include transition(ease 0.3s);
+            border: 1px solid rgba(255,255,255,0.5);
+            transform: scale(1.2,1.2);
+        }
+        &:hover{
+            color: $white;
+            &:after {
+                opacity: 1;
+                transform: scale(1,1);
+            }
+            &:before {
+                opacity: 0 ;
+                transform: scale(0.5,0.5);
+            }
+        }
+    }
+    &.gradient-btn{
+        @include p2h_gradient_button;
+        color: $white;
+        background-size: 200% auto;
+        &:hover{
+            background-position: right center;
+        }
+    }
+}
+
+
+a.border-button {
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	position: relative;
+	transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+
+}
+a.border-button:hover {
+	background-color: transparent;
+}
+a.border-button:hover:before {
+	left: 0%;
+	right: auto;
+	width: 100%;
+}
+a.border-button:before {
+	display: block;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 100%;
+	width: 0px;
+	z-index: -1;
+	content: '';
+	color: #000 !important;
+	background: $p2hgreen;
+	transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+
+}

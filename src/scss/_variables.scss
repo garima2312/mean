@@ -1,0 +1,55 @@
+//Font Weight
+//$regular:'AvenirLTStdRoman';
+//$light: 'AvenirLTStd35';
+//$semibold: 'AvenirNextLTProDemi';
+//$semibold_italic: 'AvenirNextLT-DemiIt';
+//$bold: 'AvenirLTStd65';
+
+$regular:'Tondo-reg';
+$light: 'Tondo-light';
+$bold: 'Tondo-bold';
+$fontawesome: 'fontawesome';
+
+//Color
+$charcoal: #333333;
+$grey: #6a6a6a;
+$p2hgreen:#15a98c;
+$p2hdarkgrey:#43464d;
+$p2hdarkgrey2:#9e9e9e;
+$p2hdarkgrey3:#17a7a5;
+$p2hlightgrey:#bbbbbb;
+$p2hlightgrey2:#d7d7d7;
+$p2hoffgrey:#c9c9c9;
+$p2hred:#df5a09;
+$p2h-offred:#e2522b;
+$p2hblack:#010101;
+$offwhite: #f1f1f1;
+$offwhite2: #f8f8f8;
+$offwhite3: #f5f7f9;
+$white: #fff;
+$black: #000;
+$p2hdarkgreen: #2a8a9f;
+$p2hdarkgreen2: #24b2b0;
+$p2hdarkgreen3: #2b8a8b;
+$p2hdarkblue: #27819f;
+$p2hdarkblue2: #704ba1;
+
+
+//Text transform
+$capital: uppercase;
+
+//Breakpoints
+$laptop:1199px;
+$tablet-landscape: 1024px;
+$tablet: 991px;
+$mini-tablet: 767px;
+$phone-landscape: 640px;
+$smartphone: 480px;
+
+
+
+/* corner values for bubble up and down */
+$right-val1: 50%;
+$left-val1: 50%;
+$right-val2: 75%;
+$left-val2: 75%;

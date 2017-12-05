@@ -1,0 +1,264 @@
+//Mixin
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin filter($blur) {
+  -webkit-filter: $blur;
+     -moz-filter: $blur;
+      -ms-filter: $blur;
+          filter: $blur;
+}
+@mixin flex {
+  -webkit-flex: 1.1;
+     -moz-flex: 1.1;
+      -ms-flex: 1.1;
+          flex: 1.1;
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {opacity: 1; }
+  :-moz-placeholder           {opacity: 1; }
+  ::-moz-placeholder          {opacity: 1; }
+  :-ms-input-placeholder      {opacity: 1; }
+}
+
+@mixin p2h_gradient{
+    background-image: #27819f;
+    background-image: -moz-linear-gradient(45deg, #27819f 0%, #3fc4a2 100%);
+    background-image: -webkit-linear-gradient(45deg, #27819f 0%,#3fc4a2 100%);
+    background-image: linear-gradient(45deg, #27819f 0%,#3fc4a2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#27819f', endColorstr='#3fc4a2',GradientType=1 );
+}
+@mixin p2h_gradient_button{
+    background-image: #27819f;
+    background-image: -moz-linear-gradient(to right, #2aadad 0%, #2cb08c 50%, #2aadad 100%);
+    background-image: -webkit-linear-gradient(to right, #2aadad 0%,#2cb08c 50%, #2aadad 100%);
+    background-image: linear-gradient(to right, #2aadad 0%,#2cb08c 50%, #2aadad 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#27819f', endColorstr='#3fc4a2',GradientType=1 );
+}
+
+@mixin p2h_gradient_button2{
+    background: #2caeaa;
+background: -moz-linear-gradient(left, #2caeaa 0%, #24aabd 100%);
+background: -webkit-linear-gradient(left, #2caeaa 0%,#24aabd 100%);
+background: linear-gradient(to right, #2caeaa 0%,#24aabd 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2caeaa', endColorstr='#24aabd',GradientType=1 );
+}
+
+@mixin p2h_gradient_reverse{
+    background: #15a980;
+    background: -moz-linear-gradient(left, #15a980 0%, #15a997 100%);
+    background: -webkit-linear-gradient(left, #15a980 0%,#15a997 100%);
+    background: linear-gradient(to right, #15a980 0%,#15a997 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#15a980', endColorstr='#15a997',GradientType=1 );
+}
+@mixin p2h_gradient1{
+    background: #3bb887;
+background: -moz-linear-gradient(left, #3bb887 0%, #33b397 100%);
+background: -webkit-linear-gradient(left, #3bb887 0%,#33b397 100%);
+background: linear-gradient(to right, #3bb887 0%,#33b397 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bb887', endColorstr='#33b397',GradientType=1 );
+}
+@mixin p2h_gradient2{
+    background: #6b1ea0;
+    background: -moz-linear-gradient(left, #6b1ea0 0%, #ff6a00 100%);
+    background: -webkit-linear-gradient(left, #6b1ea0 0%,#ff6a00 100%);
+    background: linear-gradient(to right, #6b1ea0 0%,#ff6a00 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b1ea0', endColorstr='#ff6a00',GradientType=1 );
+}
+@mixin p2h_gradient3{
+    background: #ef473a;
+background: -moz-linear-gradient(left, #ef473a 0%, #cb2d3e 100%);
+background: -webkit-linear-gradient(left, #ef473a 0%,#cb2d3e 100%);
+background: linear-gradient(to right, #ef473a 0%,#cb2d3e 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ef473a', endColorstr='#cb2d3e',GradientType=1 );
+}
+@mixin p2h_gradient4{
+    background: #283c86;
+background: -moz-linear-gradient(left, #283c86 0%, #9733ee 100%);
+background: -webkit-linear-gradient(left, #283c86 0%,#9733ee 100%);
+background: linear-gradient(to right, #283c86 0%,#9733ee 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#283c86', endColorstr='#9733ee',GradientType=1 );
+}
+@mixin p2h_gradient5{
+    background: #0a54af;
+background: -moz-linear-gradient(left, #0a54af 0%, #1cb5e0 100%);
+background: -webkit-linear-gradient(left, #0a54af 0%,#1cb5e0 100%);
+background: linear-gradient(to right, #0a54af 0%,#1cb5e0 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a54af', endColorstr='#1cb5e0',GradientType=1 );
+}
+@mixin p2h_gradient5-90deg{
+    background: #0a54af;
+background: -moz-linear-gradient(-90deg, #0a54af 0%, #1cb5e0 100%);
+background: -webkit-linear-gradient(-90deg, #0a54af 0%,#1cb5e0 100%);
+background: linear-gradient(-180deg, #0a54af 0%,#1cb5e0 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a54af', endColorstr='#1cb5e0',GradientType=1 );
+}
+@mixin p2h_gradient6{
+    background: #371749;
+background: -moz-linear-gradient(left, #371749 0%, #652555 100%);
+background: -webkit-linear-gradient(left, #371749 0%,#652555 100%);
+background: linear-gradient(to right, #371749 0%,#652555 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#371749', endColorstr='#652555',GradientType=1 );
+}
+@mixin p2h_gradient7{
+background: #202671;
+background: -moz-linear-gradient(45deg, #202671 0%, #652d6b 100%);
+background: -webkit-linear-gradient(45deg, #202671 0%,#652d6b 100%);
+background: linear-gradient(45deg, #202671 0%,#652d6b 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#202671', endColorstr='#652d6b',GradientType=1 );
+}
+
+
+
+@mixin animation($animate...) {
+$max: length($animate);
+$animations: '';
+
+@for $i from 1 through $max {
+    $animations: #{$animations + nth($animate, $i)};
+
+    @if $i < $max {
+        $animations: #{$animations + ", "};
+    }
+}
+-webkit-animation: $animations;
+-moz-animation:    $animations;
+-o-animation:      $animations;
+animation:         $animations;
+}
+
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        $browser: '-webkit-'; @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        $browser: '-moz-'; @content;
+    }
+    @-o-keyframes #{$animationName} {
+        $browser: '-o-'; @content;
+    }
+    @keyframes #{$animationName} {
+        $browser: ''; @content;
+    }
+} $browser: null;
+
+
+
+/***Transitions***/
+@mixin transition($transition...) {
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+
+@mixin transition-property($property...) {
+  -moz-transition-property: $property;
+  -o-transition-property: $property;
+  -webkit-transition-property: $property;
+  transition-property: $property;
+}
+
+@mixin transition-duration($duration...) {
+    -moz-transition-property:    $duration;
+    -o-transition-property:      $duration;
+    -webkit-transition-property: $duration;
+    transition-property:         $duration;
+}
+@mixin transition-timing-function($timing...) {
+    -moz-transition-timing-function:    $timing;
+    -o-transition-timing-function:      $timing;
+    -webkit-transition-timing-function: $timing;
+    transition-timing-function:         $timing;
+}
+@mixin transition-delay($delay...) {
+    -moz-transition-delay:    $delay;
+    -o-transition-delay:      $delay;
+    -webkit-transition-delay: $delay;
+    transition-delay:         $delay;
+}
+
+// generic transform
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+          transform: $transforms;
+}
+// rotate
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+ 
+// scale
+@mixin scale($scale) {
+	 @include transform(scale($scale));
+} 
+// translate
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+// skew
+@mixin skew ($x, $y) {
+   @include transform(skew(#{$x}deg, #{$y}deg));
+}
+//transform origin
+@mixin transform-origin ($origin) {
+    -moz-transform-origin: $origin;
+	     -o-transform-origin: $origin;
+	    -ms-transform-origin: $origin;
+	-webkit-transform-origin: $origin;
+          transform-origin: $origin;
+}
+//Select arrow appearance
+@mixin appearance {
+    -moz-appearance:none;
+    -o-appearance:none;
+    -ms-appearance:none;
+    -webkit-appearance:none;
+    appearance:none;
+}
+
+
+//Responsive view ports
+@mixin laptop {
+    @media (max-width: #{$laptop}) {
+        @content;
+    }
+}
+@mixin tablet-landscape {
+    @media (max-width: #{$tablet-landscape}) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+@mixin phone-landscape {
+    @media (max-width: #{$phone-landscape}) {
+        @content;
+    }
+}
+@mixin mini-tablet {
+    @media (max-width: #{$mini-tablet}) {
+        @content;
+    }
+}
+@mixin smartphone {
+    @media (max-width: #{$smartphone}) {
+        @content;
+    }
+}
+@mixin smartphone-landscape {
+    @media (max-width: #{$mini-tablet}) and (max-height: 479px) {
+        @content;
+    }
+}

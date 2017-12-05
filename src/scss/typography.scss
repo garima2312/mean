@@ -1,0 +1,61 @@
+
+@font-face {
+	font-family:"Tondo-bold";
+	src:url(../fonts/tondo/tondo-bold-webfont.eot);
+	src:url(../fonts/tondo/tondo-bold-webfont.eot?#iefix) format('embedded-opentype'),url(../fonts/tondo/tondo-bold-webfont.woff2) format('woff2'),url(../fonts/tondo/tondo-bold-webfont.woff) format('woff'),url(../fonts/tondo/tondo-bold-webfont.ttf) format('truetype'),url(../fonts/tondo/tondo-bold-webfont.svg#tondobold) format('svg');
+	font-weight:500;
+	font-style:normal
+}
+@font-face {
+	font-family:"Tondo-reg";
+	src:url(../fonts/tondo/tondo-regular-webfont.eot);
+	src:url(../fonts/tondo/tondo-regular-webfont.eot?#iefix) format('embedded-opentype'),url(../fonts/tondo/tondo-regular-webfont.woff2) format('woff2'),url(../fonts/tondo/tondo-regular-webfont.woff) format('woff'),url(../fonts/tondo/tondo-regular-webfont.ttf) format('truetype'),url(../fonts/tondo/tondo-regular-webfont.svg#tondoregular) format('svg');
+	font-weight:400;
+	font-style:normal
+}
+@font-face {
+	font-family:"Tondo-light";
+	src:url(../fonts/tondo/tondo-light-webfont.eot);
+	src:url(../fonts/tondo/tondo-light-webfont.eot?#iefix) format('embedded-opentype'),url(../fonts/tondo/tondo-light-webfont.woff2) format('woff2'),url(../fonts/tondo/tondo-light-webfont.woff) format('woff'),url(../fonts/tondo/tondo-light-webfont.ttf) format('truetype'),url(../fonts/tondo/tondo-light-webfont.svg#tondolight) format('svg');
+	font-weight:100;
+	font-style:normal
+}
+
+
+body,html{ 
+    height: 100%;
+}
+body{ 
+    font-family: $light;
+    color: $charcoal;
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    font-weight: normal;
+}
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+}
+p{
+    font-family: $light;
+}
+a, button, input[type='submit']{    
+    @include transition(ease 0.3s);
+    color: $charcoal;
+    &:hover, &:focus{
+        text-decoration: none;
+        outline: none;
+    }
+}
+input, button, select{
+    &:focus{
+        outline: none;
+    }
+}
+ul,ol{
+    margin-bottom: 0;
+    list-style: none;
+    padding: 0;
+}
+@include placeholder;

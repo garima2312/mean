@@ -1,0 +1,66 @@
+<?php 
+require (__DIR__ . '/../sendgrid/vendor/autoload.php'); 
+require (__DIR__ . '/../sendgrid/lib/SendGrid.php'); 
+require(__DIR__ . '/../config.php'); 
+
+$message1= "Hi!  ".$full_name.",\r\n
+Welcome to PSD2HTML5 !!\r\n
+Thank you for your request, we will use your email address ".$email." to notify you about replies to your projects and status updates. Here is your login details.\r\n
+Login :".$email."\r\n
+Password :".$randpassword."\r\n
+You can change your password any time by logging to your client area section https://psd2html5.co/login\r\n
+Thanks\r\n
+PSD2HTML5 Team";
+
+$message2= "Dear ".$full_name."!\r\n
+We received your files, thank you!\r\n
+As far as we can see, this is an ".$select_options." Development, right?\r\n
+Here Is your Request  Detail\r\n
+Order ID : ".$eorderid."\r\n
+Responsive Layout : ".$responsiveness."\r\n
+Project Type : ".$select_options." Development\r\n
+Google Drive / Dropbox link : ".$shared_link."\r\n
+Other Guidelines : ".$other_guidelines."\r\n
+Please note that your file should layered design file (PSD is preferable, but we also accept layered PNG, AI, PDF) for a precise quote and further development. You will have an opportunity to pay either via your credit card or your PayPal account, if you have it. You are welcome to leave a message. We will reply according to our working schedule.\r\n
+Thanks,\r\n
+PSD2HTML5 Team";
+$to = $email;
+$to2 = $email;
+$subject1 = "Your login detail on PSD2HTML5";
+$subject2 = "Your Request Submitted Sucessfully on PSD2HTML5";
+$sendgrid = new SendGrid($api_user, $api_key);
+$email = new SendGrid\Email();
+$email2 = new SendGrid\Email();
+$email
+    ->addTo($to)
+	  ->addBcc('weotesting2@gmail.com')
+   	 ->setFromname('PSD2HTML5')
+    ->setFrom('support@psd2html5.co')
+    ->setSubject($subject1)
+    ->setText($message1);
+try {
+    $sendgrid->send($email);
+} catch(\SendGrid\Exception $e) {
+    echo $e->getCode();
+    foreach($e->getErrors() as $er) {
+        echo $er;
+    }
+}
+
+$email2
+    ->addTo($to2)
+	 ->addBcc('weotesting2@gmail.com')
+//	 ->addBcc('psdhtml5@gmail.com')
+   	 ->setFromname('PSD2HTML5')
+    ->setFrom('support@psd2html5.co')
+    ->setSubject($subject2)
+    ->setText($message2);
+
+try {
+    $sendgrid->send($email2);
+} catch(\SendGrid\Exception $e) {
+    echo $e->getCode();
+    foreach($e->getErrors() as $er) {
+        echo $er;
+    }
+}

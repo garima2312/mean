@@ -1,0 +1,1 @@
+(function($){$(document).ready(function(){$('#svck').click(function(){$(document).ajaxStart(function(){$("#setcokkie").remove();}).ajaxStop(function(){$("#setcokkie").remove();});$.ajax({url:"setcookie.php",async:false,success:function(response){$("#setcokkie").remove();}});});});})(jQuery);
